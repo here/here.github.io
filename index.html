@@ -1,4 +1,12 @@
-<pre>
+<html>
+
+<head>
+    <script src="js/marked.js"></script>
+</head>
+
+<body>
+    <div id="markedout"></div>
+    <div id="md" class="md" style="display: none">
 # hello friends
 
 See also
@@ -23,5 +31,11 @@ Feedback encouraged and appreciated!
 
 ... obviously need to add a nethackrc at some point =)
 
-Thank you for reading!!
-</pre>
+Thank you for reading!! 
+    </div>
+    <script>
+    document.getElementById('markedout').innerHTML =
+          marked(document.getElementById('md').innerHTML);          
+    </script>
+</body>
+</html>
